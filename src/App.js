@@ -1,8 +1,9 @@
+import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
-  const expenses = [
+  const expensesArr = [
     {
       id: 1,
       title: "Car Insurance",
@@ -29,9 +30,15 @@ function App() {
     },
   ];
 
+  const [expenses, setExpenses] = useState(expensesArr);
+
+  const addExpenseHandler = (expense) => {
+    setExpenses(expense);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
