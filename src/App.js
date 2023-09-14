@@ -14,19 +14,19 @@ function App() {
       id: 2,
       title: "Gaming Computer",
       amount: 1500.99,
-      date: new Date(2023, 6, 23),
+      date: new Date(2021, 6, 23),
     },
     {
       id: 3,
       title: "Office Laptop",
       amount: 899.99,
-      date: new Date(2023, 8, 7),
+      date: new Date(2021, 8, 7),
     },
     {
       id: 4,
       title: "TV",
       amount: 699.99,
-      date: new Date(2023, 4, 21),
+      date: new Date(2022, 4, 21),
     },
   ];
 

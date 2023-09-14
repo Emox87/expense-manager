@@ -24,7 +24,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -35,17 +35,6 @@ const ExpenseForm = (props) => {
     setEneteredAmount("");
     setEnteredDate("");
   };
-
-  // Shared function handler to change the values
-  // const inputChangeHandler = (identifier, value) => {
-  //   if (identifier === "title") {
-  //     setEneteredTitle(value);
-  //   } else if (identifier === "date") {
-  //     setEnteredDate(value);
-  //   } else {
-  //     setEneteredAmount(value);
-  //   }
-  // };
 
   return (
     <form onSubmit={submitHandler}>
