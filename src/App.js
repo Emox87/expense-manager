@@ -3,7 +3,7 @@ import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
-  const expensesArr = [
+  const expensesData = [
     {
       id: 1,
       title: "Car Insurance",
@@ -30,10 +30,12 @@ function App() {
     },
   ];
 
-  const [expenses, setExpenses] = useState(expensesArr);
+  const [expenses, setExpenses] = useState(expensesData);
 
   const addExpenseHandler = (expense) => {
-    setExpenses(expense);
+    setExpenses((prevExpenses) => {
+      return [...prevExpenses, expense];
+    });
   };
 
   return (
